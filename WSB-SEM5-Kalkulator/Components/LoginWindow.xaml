@@ -1,0 +1,48 @@
+﻿<Window x:Class="WSB_SEM5_Kalkulator.Components.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WSB_SEM5_Kalkulator.Components"
+        mc:Ignorable="d"
+        Title="DialogLogowania" Height="200" Width="400" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" SnapsToDevicePixels="True">
+    <Grid Background="#FFEEEEEE" Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="0" Width="100" Height="100" Margin="10" Source="../Resources/keys.png" Stretch="Fill"/>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button x:Name="LoginBtn" Margin="5" Padding="3" MinWidth="80">Loguj</Button>
+                <Button x:Name="CancelBtn" Margin="5" Padding="3" MinWidth="80">Anuluj</Button>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" VerticalAlignment="Center">Login</Label>
+                    <Label Grid.Column="0" Grid.Row="1" VerticalAlignment="Center">Hasło</Label>
+
+                    <TextBox x:Name="LoginField" Grid.Column="1" Grid.Row="0" MaxLength="20" Width="140" Margin="5" VerticalContentAlignment="Center" />
+                    <PasswordBox x:Name="PasswordField" Grid.Column="1" Grid.Row="1" Width="140" PasswordChar="*" Margin="5" VerticalContentAlignment="Center"/>
+
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
